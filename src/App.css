@@ -1,0 +1,15 @@
+.question {
+    cursor: pointer;
+}
+
+.question-div {
+    width: 200px;
+    height: 70;
+    text-align: center;
+    border-bottom: 2px solid red;
+}
+.answer {
+    color: green;
+}
+
+
