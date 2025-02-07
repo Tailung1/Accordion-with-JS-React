@@ -10,7 +10,7 @@ function App() {
       <div className='container'>
         {questionsAmount.map((questionNumber)=>{
             return (
-                <Question active={active} setActive={setActive} questionNumber={questionNumber}/>
+                <Question key={questionNumber} active={active} setActive={setActive} questionNumber={questionNumber}/>
             )
         })}
       </div>
