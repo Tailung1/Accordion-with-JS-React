@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import questions from "./questions.json"
 import Question from './components/Question';
 
 function App() {
@@ -8,9 +9,9 @@ function App() {
   return (
     <>
       <div className='container'>
-        {questionsAmount.map((questionNumber)=>{
+        {questions.map((questionObj,index)=>{
             return (
-                <Question key={questionNumber} active={active} setActive={setActive} questionNumber={questionNumber}/>
+                <Question key={index} active={active} setActive={setActive} questionNumber={index + 1}/>
             )
         })}
       </div>
