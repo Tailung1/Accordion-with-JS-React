@@ -11,7 +11,12 @@ function App() {
       <div className='container'>
         {questions.map((questionObj,index)=>{
             return (
-                <Question key={index} active={active} setActive={setActive} questionNumber={index + 1}/>
+                <Question
+                 key={index}
+                active={active}
+                setActive={setActive}
+                questionObj={questionObj}
+                questionNumber={index + 1}/>
             )
         })}
       </div>

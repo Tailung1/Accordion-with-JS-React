@@ -1,19 +1,19 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Question(props){
+export default function Question(
+    {active,setActive,questionNumber,questionObj}
+){
     return (
         <div className='question-div'>
         <p className='question'
         onClick={()=>
-            props.active === props.questionNumber
-            ? props.setActive(0)
-            : props.setActive(props.questionNumber)}
-            >Question {props.questionNumber}</p>
+            active === questionNumber
+            ? setActive(0)
+            : setActive(questionNumber)}
+            > {questionObj.question}</p>
 
-            {props.active === props.questionNumber
-            ?<p className='answer'>Answer {props.questionNumber}</p>
-            : null}
+            {active === questionNumber ? <p className='answer'> {questionObj.answer} </p> : null }
         </div>
     )
 }
