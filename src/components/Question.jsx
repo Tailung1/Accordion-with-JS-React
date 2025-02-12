@@ -2,8 +2,11 @@ import React from "react";
 import { useState } from "react";
 
 export default function Question(
-    {active,setActive,questionNumber,questionObj}
-){
+        {active,
+        setActive,
+        questionNumber,
+        questionObj}
+    ){
     return (
         <div className='question-div'>
         <p className='question'
@@ -11,8 +14,8 @@ export default function Question(
             active === questionNumber
             ? setActive(0)
             : setActive(questionNumber)}
-            > {questionObj.question}</p>
-
+            > {questionObj.question}
+            </p>
             {active === questionNumber ? <p className='answer'> {questionObj.answer} </p> : null }
         </div>
     )
