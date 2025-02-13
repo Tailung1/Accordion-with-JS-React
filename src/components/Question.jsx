@@ -18,7 +18,8 @@ export default function Question({
                 <QuestionParagraph active={active} questionNumber={questionNumber}> 
                 {questionObj.question}
                 </QuestionParagraph>
-                   <img src={Arrow} alt="arrow-icon"/>
+                   <img src={Arrow} alt="arrow-icon" style={active === questionNumber?
+                   {transform:"rotate(180deg)"}:null}/>
                 </QuestionDiv>
             {active === questionNumber ? <Answer> {questionObj.answer} </Answer> : null }
            </QuestionAnswerDiv>
